@@ -67,7 +67,7 @@ const checkFields = () => {
         alert("Field(s) should not be empty.");
         isValid = false;
         throw BreakException;
-      } else {
+      } else if(!(/\D/.test(inputValue))) {
         inputValues.push(inputValue);
       }
       if (isValid) {
