@@ -88,7 +88,13 @@ function getIncome(inputValues) {
   let tax = 0;
   const grossIncome = parseInt(inputValues[0]);
   const extraIncome = parseInt(inputValues[1]);
-  const applicableDeductions = parseInt(inputValues[3]);
+  const applicableDeductions = parseInt(inputValues[2]);
+
+  console.log("inputValues==>", inputValues);
+
+  console.log(grossIncome)
+  console.log(extraIncome)
+  console.log(applicableDeductions)
 
   const income = grossIncome + extraIncome - applicableDeductions;
   if (income > 800000) {
@@ -103,6 +109,8 @@ function getIncome(inputValues) {
   }
   outputModal.style.display = "block";
   const overallIncome = income - tax;
+
+  console.log("income==>",income);
 
   function formatOutput(number) {
     const parts = number.toString().split('.');
