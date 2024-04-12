@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="taxCalculator">
+        <div class="container">
+            <section class="input_fields">
+                <label for="income">Enter gross annual income <button class="queMark" id="queMark1">❔</button></label>
+                <div class="input">
+                    <input type="text" placeholder="Enter gross annual income" class="inputField" id="inputField1">
+                    <button class="errorBtn" id="error1">❕</button>
+                </div>
+
+            </section>
+            <section class="input_fields">
+                <label for="income">Enter extra income <button class="queMark" id="queMark2">❔</button></label>
+                <div class="input">
+                    <input type="text" placeholder="Enter extra income" class="inputField" id="inputField2">
+                    <button class="errorBtn" id="error2">❕</button>
+                </div>
+            </section>
+            <section class="input_fields">
+                <label for="income">Enter age group <button class="queMark" id="queMark3">❔</button></label>
+                <select name="ageGrp" id="inputField3" class="inputField">
+                    <option id="ageGrp1" value="<40">
+                        < 40
+                    </option>
+                    <option id="ageGrp2" value=">=40&<60">
+                        ≥ 40 & < 60
+                    </option>
+                    <option id="ageGrp3" value=">=60">
+                        ≥ 60
+                    </option>
+                </select>
+            </section>
+            <section class="input_fields">
+                <label for="income">Enter total applicable deductions <button class="queMark"
+                        id="queMark4">❔</button></label>
+                <div class="input">
+                    <input type="text" placeholder="Enter total applicable deductions" class="inputField"
+                        id="inputField4">
+                    <button class="errorBtn" id="error4">❕</button>
+                </div>
+            </section>
+
+            <button class="btn" id="submitBtn">Submit</button>
+
+
+            <div class="outputModal">
+                <section class="output">
+                    <header class="largeFont">Your overall income will be</header>
+                    <p id="overallIncome"></p>
+                    <p class="smallFont">after tax deductions</p>
+                </section>
+                <button class="btn" id="closeBtn">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
