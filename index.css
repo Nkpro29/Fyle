@@ -1,7 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-   font-family: "Platypi", serif;
+  font-family: "Platypi", serif;
+}
+
+body::-webkit-scrollbar{
+  background-color: rgb(249, 189, 189);
+  border-radius: 6px;
+  scrollbar-track-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(248, 170, 170); 
 }
 
 .taxCalculator {
@@ -182,30 +192,52 @@ body {
   padding: 10px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
+  .container{
+    width: 80%;
+  }
+  #inputField3{
+    width: 72.5%;
+  }
+}
+
+@media screen and (max-width: 820px) {
   .container {
     width: 90%;
+    height: inherit;
   }
 
-  .input_fields label,
-  .input_fields select,
+  .heading p {
+    font-size: 2.5rem;
+  }
+
+  .input_fields label {
+    font-size: 1rem;
+  }
+
   .input_fields input,
-  .btn,
-  .queMark,
-  .errorBtn {
-    width: 100%;
+  .input_fields select {
+    padding: 0.7rem;
+  }
+  #inputField3{
+    width: 73.5%;
   }
 
-  .outputModal {
-    width: 90%;
-    height: 60%;
-    bottom: 15%;
-    left: 5%;
+  #submitBtn,
+  #closeBtn {
+    
+    padding: 0.8rem;
   }
 }
 
 @media screen and (max-width: 480px) {
   .container {
-    width: 95%;
+    max-width: 90%;
+  }
+#inputField3{
+  width: 77%;
+}
+  .heading p {
+    font-size: 2rem;
   }
 }
