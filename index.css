@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb:hover {
 .container {
   width: 31%;
   height: 60%;
-  border: 3px solid rgb(109, 109, 109);
+  border: 3px solid rgb(90, 89, 89);
   border-radius: 3px;
 }
 
@@ -233,6 +233,9 @@ body::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 480px) {
   .container {
     max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    bottom: 10px;
   }
 #inputField3{
   width: 77%;
